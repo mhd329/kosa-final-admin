@@ -33,7 +33,7 @@ public class SecurityConfig {
             .anyRequest().permitAll()
         ).formLogin(form -> form
             .loginPage("/login/form") // 로그인 페이지.
-            .loginProcessingUrl("/login") // 로그인 처리할 url.
+            .loginProcessingUrl("/api/login") // 로그인 처리할 url.
             .successHandler((request, response, authentication) -> new LoginHandler().onAuthenticationSuccess(request, response, authentication))
             .failureHandler((request, response, authentication) -> new LoginHandler().onAuthenticationFailure(request, response, authentication))
             .permitAll()

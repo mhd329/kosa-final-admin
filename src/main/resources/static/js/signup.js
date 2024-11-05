@@ -85,7 +85,7 @@ function handleSignupAdminForm (event) {
 }
 
 function validateForm() {
-    const complete = validateUserName() && exist && validateConfirmPassword();
+    const complete = exist && validateConfirmPassword();
     if (complete) {
         return true;
     }
